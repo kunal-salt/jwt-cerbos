@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  nodeapp:
+    build: .
+    ports: 
+      - "3000:3000"
+    command: ["npm", "start"]
+  cerbos:
+    image: ghcr.io/cerbos/cerbos
+    ports:
+      - "3593:3593"
+      - "3592:3592"
+    volumes:
+      - ./cerbos/config:/config
+      - ./cerbos/policies:/policies
+    command: ["server", "--config=config/conf.yaml"]

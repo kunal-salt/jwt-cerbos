@@ -1,4 +1,4 @@
-const contacts = [
+let contacts = [
   {
     id: "abc123",
     name: "John Smith",
@@ -17,5 +17,8 @@ export default {
   },
   find: () => {
     return contacts;
+  },
+  create: (contact) => {
+    contacts.push(contact);
   },
 };

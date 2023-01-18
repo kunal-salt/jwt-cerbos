@@ -13,6 +13,8 @@
   "type": "module",
   "dependencies": {
     "@cerbos/grpc": "^0.5.1",
+    "@cerbos/http": "^0.8.1",
+    "cross-fetch": "^3.1.5",
     "express": "^4.17.1",
     "express-jwt": "^6.1.2"
   },
